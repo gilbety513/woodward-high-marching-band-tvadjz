@@ -1,24 +1,36 @@
+
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 
 export const colors = {
-  primary: '#162456',    // Material Blue
-  secondary: '#193cb8',  // Darker Blue
-  accent: '#64B5F6',     // Light Blue
-  background: '#101824',  // Keeping dark background
-  backgroundAlt: '#162133',  // Keeping dark background
-  text: '#e3e3e3',       // Keeping light text
-  grey: '#90CAF9',       // Light Blue Grey
-  card: '#193cb8',       // Keeping dark card background
+  primary: '#003DA5',      // Royal Blue
+  secondary: '#1E3A8A',    // Darker Royal Blue
+  accent: '#60A5FA',       // Light Blue accent
+  background: '#FFFFFF',   // White background
+  backgroundAlt: '#F8FAFC', // Light grey background
+  text: '#000000',         // Black text
+  textLight: '#374151',    // Dark grey text
+  white: '#FFFFFF',        // Pure white
+  black: '#000000',        // Pure black
+  grey: '#6B7280',         // Medium grey
+  card: '#FFFFFF',         // White card background
+  border: '#E5E7EB',       // Light border
 };
 
 export const buttonStyles = StyleSheet.create({
-  instructionsButton: {
+  primaryButton: {
     backgroundColor: colors.primary,
     alignSelf: 'center',
     width: '100%',
   },
-  backButton: {
-    backgroundColor: colors.backgroundAlt,
+  secondaryButton: {
+    backgroundColor: colors.white,
+    borderWidth: 2,
+    borderColor: colors.primary,
+    alignSelf: 'center',
+    width: '100%',
+  },
+  donationButton: {
+    backgroundColor: '#FFD700',
     alignSelf: 'center',
     width: '100%',
   },
@@ -35,8 +47,6 @@ export const commonStyles = StyleSheet.create({
     backgroundColor: colors.background,
     width: '100%',
     height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   content: {
     flex: 1,
@@ -44,13 +54,21 @@ export const commonStyles = StyleSheet.create({
     justifyContent: 'center',
     maxWidth: 800,
     width: '100%',
+    paddingHorizontal: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: '800',
     textAlign: 'center',
-    color: colors.text,
-    marginBottom: 10
+    color: colors.primary,
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontSize: 18,
+    fontWeight: '600',
+    textAlign: 'center',
+    color: colors.textLight,
+    marginBottom: 20,
   },
   text: {
     fontSize: 16,
@@ -64,26 +82,62 @@ export const commonStyles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     paddingHorizontal: 20,
+    marginVertical: 10,
   },
   buttonContainer: {
     width: '100%',
     alignItems: 'center',
     paddingHorizontal: 20,
+    marginTop: 20,
   },
   card: {
-    backgroundColor: colors.backgroundAlt,
-    borderColor: colors.grey,
+    backgroundColor: colors.card,
+    borderColor: colors.border,
     borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
+    borderRadius: 12,
+    padding: 20,
     marginVertical: 8,
     width: '100%',
-    boxShadow: '0px 2px 3px rgba(0, 0, 0, 0.1)',
-    elevation: 2,
+    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',
+    elevation: 3,
   },
-  icon: {
-    width: 60,
-    height: 60,
-    tintColor: "white",
+  logo: {
+    width: 200,
+    height: 200,
+    marginBottom: 30,
+  },
+  linkButton: {
+    backgroundColor: colors.primary,
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+    borderRadius: 12,
+    marginVertical: 8,
+    width: '100%',
+    alignItems: 'center',
+    boxShadow: '0px 4px 12px rgba(0, 61, 165, 0.3)',
+    elevation: 4,
+  },
+  linkButtonText: {
+    color: colors.white,
+    fontSize: 16,
+    fontWeight: '600',
+    textAlign: 'center',
+  },
+  donationButton: {
+    backgroundColor: '#FFD700',
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+    borderRadius: 12,
+    marginVertical: 8,
+    width: '100%',
+    alignItems: 'center',
+    boxShadow: '0px 4px 12px rgba(255, 215, 0, 0.3)',
+    elevation: 4,
+  },
+  donationButtonText: {
+    color: colors.black,
+    fontSize: 16,
+    fontWeight: '700',
+    textAlign: 'center',
   },
 });
