@@ -37,6 +37,10 @@ export default function MainScreen() {
     openLink('https://www.paypal.com/ncp/payment/LLDKHUHQJ4KF6', 'Donation Page');
   };
 
+  const handleInstagram = () => {
+    openLink('https://www.instagram.com/woodward_band513?igsh=MWp2ZHk5MW43Njkydw%3D%3D&utm_source=qr', 'Instagram Page');
+  };
+
   return (
     <SafeAreaView style={commonStyles.container}>
       <ScrollView 
@@ -87,6 +91,19 @@ export default function MainScreen() {
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Ionicons name="school" size={24} color={colors.white} style={{ marginRight: 12 }} />
                 <Text style={commonStyles.linkButtonText}>Band App for Students</Text>
+              </View>
+            </TouchableOpacity>
+
+            {/* Instagram Button */}
+            <TouchableOpacity
+              style={commonStyles.linkButton}
+              onPress={handleInstagram}
+              disabled={isLoading}
+              activeOpacity={0.8}
+            >
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <Ionicons name="logo-instagram" size={24} color={colors.white} style={{ marginRight: 12 }} />
+                <Text style={commonStyles.linkButtonText}>Follow Us on Instagram</Text>
               </View>
             </TouchableOpacity>
 
